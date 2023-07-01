@@ -1,6 +1,6 @@
 import curses
-from font import font
-
+from src.font import font
+import os
 
 def display(stdscr, text, text_color = "green"):
     __set_color(text_color)
@@ -31,14 +31,19 @@ def __display_text(stdscr, text):
     stdscr.clear()
     
     formatted_text = [font[char] for char in text]
-    
     height, width = stdscr.getmaxyx()
-    start_x = (width // 2) - (len(font["0"][0])) * (len(formatted_text) + 2) // 2
+    start_x = (width // 2)
+    x_offset = 0
+    
+    for char in text: 
+        x_offset += len(font[char][0])
+        
+    start_x = start_x - (x_offset - 1) // 2
     start_y = (height // 2) - (len(font["0"]) - 2) // 2
     
     for i, digit_ascii in enumerate(formatted_text):
-        start_x += (len(font["0"][0]))
         __display_char(stdscr, digit_ascii, start_y, start_x)
+        start_x += (len(font[text[i]][0])) # Add additional letter spacing here if you want
 
 def __display_char(stdscr, text, start_y, start_x):
     try:
@@ -59,4 +64,5 @@ def init_ui():
 
 def destroy_ui():
     curses.endwin()
-    exit(0)
+
+    os._exit(0)
