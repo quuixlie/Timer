@@ -1,5 +1,5 @@
 from src.ui import init_ui, play_confetti_animation, set_color, destroy_ui
-from src.pomodoro_timer import start_timer
+from src.timer import start_timer
 from src.input_handler import get_user_input
 
 
