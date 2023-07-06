@@ -14,5 +14,14 @@ Q - close the timer
 pip3 install pygame    
 git clone https://github.com/quuixly/PomodoroTimer.git    
 cd PomodoroTimer    
-
-
+# Customization
+If you want to change the color of the text, you can do it by editing the argument of the function " set_color("cyan") " in the main.py file to the color of your choice.    
+Colors to choose from:    
+- "white"    
+- "black"
+- "red"
+- "green"
+- "yellow"
+- "blue"
+- "magenta"
+- "cyan"
