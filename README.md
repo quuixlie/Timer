@@ -1,4 +1,4 @@
-# PomodoroTimer
+# Timer
 The script asks the user to enter a time, then counts down the time and displays a cool confetti animation at the end.    
 ![image](https://github.com/quuixly/PomodoroTimer/assets/121305329/2c58024b-0d24-4422-b54c-58acd46b07fb)
 ![image](https://github.com/quuixly/PomodoroTimer/assets/121305329/321a178a-e95c-47ac-9bc8-a1f5d759268c)
